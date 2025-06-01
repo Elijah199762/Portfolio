@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" class="transition-colors duration-300">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elijah.dev | Portfolio</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: { extend: {} },
+      };
+    </script>
+
+    <!-- AOS (Scroll Animations) -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body
+    class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-sans scroll-smooth"
+  >
+    <!-- Header -->
+    <header class="bg-white dark:bg-gray-800 shadow sticky top-0 z-50">
+      <div
+        class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-2xl font-bold text-blue-600 dark:text-blue-400">
+          Elijah.dev
+        </h1>
+
+        <button id="menuToggle" class="md:hidden text-xl">☰</button>
+
+        <nav class="hidden md:flex space-x-6 font-medium" id="navLinks">
+          <a href="#home" class="hover:text-blue-500 dark:hover:text-blue-300"
+            >Home</a
+          >
+          <a href="#about" class="hover:text-blue-500 dark:hover:text-blue-300"
+            >About</a
+          >
+          <a href="#skills" class="hover:text-blue-500 dark:hover:text-blue-300"
+            >Skills</a
+          >
+          <a
+            href="#journey"
+            class="hover:text-blue-500 dark:hover:text-blue-300"
+            >Journey</a
+          >
+          <a
+            href="#projects"
+            class="hover:text-blue-500 dark:hover:text-blue-300"
+            >Projects</a
+          >
+          <a
+            href="#contact"
+            class="hover:text-blue-500 dark:hover:text-blue-300"
+            >Contact</a
+          >
+        </nav>
+
+        <button
+          id="darkToggle"
+          class="ml-4 px-3 py-1 rounded bg-gray-200 dark:bg-gray-700 text-sm"
+        >
+          Toggle Dark
+        </button>
+      </div>
+
+      <div id="mobileNav" class="md:hidden hidden px-6 pb-4 space-y-2">
+        <a href="#home" class="block">Home</a>
+        <a href="#about" class="block">About</a>
+        <a href="#skills" class="block">Skills</a>
+        <a href="#journey" class="block">Journey</a>
+        <a href="#projects" class="block">Projects</a>
+        <a href="#contact" class="block">Contact</a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section
+      id="home"
+      class="py-20 bg-blue-100 dark:bg-gray-800"
+      data-aos="fade-up"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10"
+      >
+        <img src="./E.jpg" alt="Elijah" class="w-72 rounded-lg shadow-md" />
+        <div>
+          <h2 class="text-4xl font-bold mb-4">Hi, I’m Elijah</h2>
+          <p class="text-lg mb-6">
+            Web developer in training, building clean, responsive websites with
+            HTML, CSS, and JavaScript.
+          </p>
+          <a
+            href="#projects"
+            class="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
+            >View My Work</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20" data-aos="fade-up">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6">About Me</h2>
+        <p class="mb-4">
+          I’m Elijah, a web developer in training. I started learning to turn
+          ideas into tools people can actually use.
+        </p>
+        <p class="mb-4">
+          I’m focused on HTML, CSS, and JavaScript — and I’m building real
+          projects to sharpen my skills.
+        </p>
+        <p>
+          I care about writing code that’s readable, maintainable, and actually
+          solves problems.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section
+      id="skills"
+      class="py-20 bg-blue-50 dark:bg-gray-800"
+      data-aos="fade-up"
+    >
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-8">My Skills</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+          <div class="bg-white dark:bg-gray-700 p-4 rounded shadow">HTML</div>
+          <div class="bg-white dark:bg-gray-700 p-4 rounded shadow">CSS</div>
+          <div class="bg-white dark:bg-gray-700 p-4 rounded shadow">
+            JavaScript
+          </div>
+          <div class="bg-white dark:bg-gray-700 p-4 rounded shadow">
+            Tailwind CSS
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Learning Journey -->
+    <section id="journey" class="py-20" data-aos="fade-up">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-10 text-center">
+          My Learning Journey
+        </h2>
+        <ol class="relative border-l border-blue-300 dark:border-blue-500">
+          <li class="mb-10 ml-6">
+            <span
+              class="absolute w-4 h-4 bg-blue-600 rounded-full -left-2.5 border border-white"
+            ></span>
+            <h3 class="text-lg font-semibold">Jan 2025 – Started HTML & CSS</h3>
+            <p>Learned basic layout and styling by building static pages.</p>
+          </li>
+          <li class="mb-10 ml-6">
+            <span
+              class="absolute w-4 h-4 bg-blue-600 rounded-full -left-2.5 border border-white"
+            ></span>
+            <h3 class="text-lg font-semibold">March 2025 – Tailwind CSS</h3>
+            <p>
+              Switched to utility-first styling. Building faster and cleaner.
+            </p>
+          </li>
+          <li class="ml-6">
+            <span
+              class="absolute w-4 h-4 bg-blue-600 rounded-full -left-2.5 border border-white"
+            ></span>
+            <h3 class="text-lg font-semibold">May 2025 – JavaScript</h3>
+            <p>
+              Diving into functions, DOM, and interactivity with real projects.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-20" data-aos="fade-up">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6">Projects</h2>
+        <div class="bg-white dark:bg-gray-700 p-6 rounded shadow">
+          <h3 class="text-xl font-semibold mb-2">Portfolio Website</h3>
+          <p class="mb-4">
+            This site is one of my first major projects — a clean, responsive
+            portfolio.
+          </p>
+          <a
+            href="https://github.com/yourusername/portfolio-site"
+            class="text-blue-600 dark:text-blue-400 hover:underline"
+            >View Code on GitHub</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section
+      id="contact"
+      class="py-20 bg-blue-100 dark:bg-gray-800"
+      data-aos="fade-up"
+    >
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
+        <form
+          action="https://formspree.io/f/movwqqvd"
+          method="POST"
+          class="space-y-4 max-w-md mx-auto text-left"
+        >
+          <div>
+            <label class="block text-sm font-medium mb-1">Your Name</label>
+            <input
+              type="text"
+              name="name"
+              required
+              class="w-full border px-4 py-2 rounded dark:bg-gray-700"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Email</label>
+            <input
+              type="email"
+              name="email"
+              required
+              class="w-full border px-4 py-2 rounded dark:bg-gray-700"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Message</label>
+            <textarea
+              name="message"
+              required
+              class="w-full border px-4 py-2 rounded h-28 dark:bg-gray-700"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="bg-white dark:bg-gray-900 py-6 text-center text-sm text-gray-500 dark:text-gray-400"
+    >
+      <p>© 2025 Elijah.dev</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true });
+
+      document.getElementById("darkToggle").addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+      });
+
+      document.getElementById("menuToggle").addEventListener("click", () => {
+        const nav = document.getElementById("mobileNav");
+        nav.classList.toggle("hidden");
+      });
+    </script>
+    <script src="./sc.js"></script>
+  </body>
+</html>
